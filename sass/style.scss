@@ -1,11 +1,11 @@
 // COLORS
-$color-soft-blue:hsl(215, 51%, 70%);
-$color-cyan:hsl(178, 100%, 50%);
+$color-soft-blue: hsl(215, 51%, 70%);
+$color-cyan: hsl(178, 100%, 50%);
 $color-very-dark-blue-main: hsl(217, 54%, 11%);
 $color-very-dark-blue-card: hsl(216, 50%, 16%);
 $color-very-dark-blue-line: hsl(215, 32%, 27%);
 $color-white: hsl(0, 0%, 100%);
-$color-attribution: hsl(228, 45%, 44%);
+// $color-attribution: hsl(228, 45%, 44%);
 
 // FONT FAMILY
 $outfit: 'Outfit';
@@ -17,6 +17,18 @@ $font-size-default: 1.8rem; // 18px
 $font-weight-light: 300;
 $font-weight-regular: 400;
 $font-weight-semi-bold: 600;
+
+@mixin horiz-flex($gap: 1rem) {
+    display: flex;
+    align-items: center;
+    gap: $gap;
+}
+
+@mixin hover-cyan {
+    &:hover {
+        color: $color-cyan;
+    }
+}
 
 * {
     margin: 0;
@@ -31,10 +43,14 @@ html {
 
 body {
     background-color: $color-very-dark-blue-main;
+    color: $color-soft-blue;
+    font-size: $font-size-default;
+    font-family: $outfit, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    // min-height: 100vh;
+    min-width: 100vw;
 }
 
 .card {
@@ -45,6 +61,68 @@ body {
 
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.white {
+    color: $color-white;
+}
+
+.nft-image {
+    border-radius: 1rem;
+    max-width: 100%;
+
+    &:hover {
+        
+    }
+}
+
+.description {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.heading {
+    @include hover-cyan;
+}
+
+.details {
+    line-height: 1.5;
+}
+
+.contract {
+    display: flex;
+    justify-content: space-between;
+}
+
+.eth {
+    @include horiz-flex;
+    color: $color-cyan;
+}
+
+.time-left {
+    @include horiz-flex;
+}
+
+hr {
+    border-style: solid;
+    border-color: $color-very-dark-blue-line;
+}
+
+.author-box {
+    @include horiz-flex(2rem);
+}
+
+.author-image {
+    max-width: 3rem;
+    border-radius: 50%;
+    border: 0.1rem solid $color-white;
+}
+
+.author {
+    @include hover-cyan;
 }
 
 // .attribution {
