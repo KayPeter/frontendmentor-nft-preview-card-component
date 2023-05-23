@@ -1,0 +1,57 @@
+// COLORS
+$color-soft-blue:hsl(215, 51%, 70%);
+$color-cyan:hsl(178, 100%, 50%);
+$color-very-dark-blue-main: hsl(217, 54%, 11%);
+$color-very-dark-blue-card: hsl(216, 50%, 16%);
+$color-very-dark-blue-line: hsl(215, 32%, 27%);
+$color-white: hsl(0, 0%, 100%);
+$color-attribution: hsl(228, 45%, 44%);
+
+// FONT FAMILY
+$outfit: 'Outfit';
+
+// FONT SIZE
+$font-size-default: 1.8rem; // 18px
+
+// FONT WEIGHTS
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-semi-bold: 600;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    // Sets it to 10px relative to the user's browser setting
+    font-size: 62.5%;
+}
+
+body {
+    background-color: $color-very-dark-blue-main;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.card {
+    padding: 2.5rem;
+    background-color: $color-very-dark-blue-card;
+    border-radius: 2rem;
+    max-width: 35rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+// .attribution {
+//     font-size: 1.1rem; // 11px
+//     text-align: center;
+// }
+
+// .attribution a {
+//     color: $color-attribution;
+// }

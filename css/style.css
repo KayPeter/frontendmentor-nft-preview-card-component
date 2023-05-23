@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  background-color: #0d192b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; }
+
+.card {
+  padding: 2.5rem;
+  background-color: #14253d;
+  border-radius: 2rem;
+  max-width: 35rem;
+  display: flex;
+  flex-direction: column; }
