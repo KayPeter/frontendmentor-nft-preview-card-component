@@ -1,6 +1,7 @@
 // COLORS
 $color-soft-blue: hsl(215, 51%, 70%);
 $color-cyan: hsl(178, 100%, 50%);
+$color-cyan-overlay: hsla(178, 100%, 50%, 0.5);
 $color-very-dark-blue-main: hsl(217, 54%, 11%);
 $color-very-dark-blue-card: hsl(216, 50%, 16%);
 $color-very-dark-blue-line: hsl(215, 32%, 27%);
@@ -27,6 +28,7 @@ $font-weight-semi-bold: 600;
 @mixin hover-cyan {
     &:hover {
         color: $color-cyan;
+        cursor: pointer;
     }
 }
 
@@ -49,8 +51,8 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    // min-height: 100vh;
-    min-width: 100vw;
+    min-height: 100vh;
+    // min-width: 100vw;
 }
 
 .card {
@@ -69,13 +71,37 @@ body {
     color: $color-white;
 }
 
+.nft-container {
+    position: relative;
+}
+
 .nft-image {
     border-radius: 1rem;
-    max-width: 100%;
+    width: 100%;
+}
 
-    &:hover {
-        
+.nft-image-active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    svg {
+        display: none;
     }
+    &:hover{
+        cursor: pointer;
+        background: $color-cyan-overlay;
+        svg {
+            display: block;
+        }
+    }
+
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .description {

@@ -14,7 +14,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 100vw; }
+  min-height: 100vh; }
 
 .card {
   padding: 2.5rem;
@@ -29,9 +29,30 @@ body {
 .white {
   color: white; }
 
+.nft-container {
+  position: relative; }
+
 .nft-image {
   border-radius: 1rem;
-  max-width: 100%; }
+  width: 100%; }
+
+.nft-image-active {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  border-radius: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .nft-image-active svg {
+    display: none; }
+  .nft-image-active:hover {
+    cursor: pointer;
+    background: rgba(0, 255, 247, 0.5); }
+    .nft-image-active:hover svg {
+      display: block; }
 
 .description {
   display: flex;
@@ -39,7 +60,8 @@ body {
   gap: 2rem; }
 
 .heading:hover {
-  color: #00fff7; }
+  color: #00fff7;
+  cursor: pointer; }
 
 .details {
   line-height: 1.5; }
@@ -74,4 +96,5 @@ hr {
   border: 0.1rem solid white; }
 
 .author:hover {
-  color: #00fff7; }
+  color: #00fff7;
+  cursor: pointer; }
