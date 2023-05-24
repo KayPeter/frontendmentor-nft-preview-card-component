@@ -43,6 +43,8 @@ body {
   height: 100%;
   width: 100%;
   border-radius: 1rem;
+  transition: background 0.3s ease-in;
+  transition: background 0.3s ease-in;
   display: flex;
   align-items: center;
   justify-content: center; }
@@ -59,9 +61,11 @@ body {
   flex-direction: column;
   gap: 2rem; }
 
-.heading:hover {
-  color: #00fff7;
-  cursor: pointer; }
+.heading {
+  transition: color 0.3s ease-in; }
+  .heading:hover {
+    color: #00fff7;
+    cursor: pointer; }
 
 .details {
   line-height: 1.5; }
@@ -95,6 +99,8 @@ hr {
   border-radius: 50%;
   border: 0.1rem solid white; }
 
-.author:hover {
-  color: #00fff7;
-  cursor: pointer; }
+.author {
+  transition: color 0.3s ease-in; }
+  .author:hover {
+    color: #00fff7;
+    cursor: pointer; }
